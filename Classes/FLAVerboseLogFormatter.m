@@ -49,30 +49,34 @@
     @autoreleasepool
     {
         NSString *logLevel;
-        switch (logMessage->logFlag)
+        switch (logMessage->_flag)
         {
-            case LOG_FLAG_ERROR:
-                logLevel = @"[Error]"; break;
-            case LOG_FLAG_WARN:
-                logLevel = @"[Warn]"; break;
-            case LOG_FLAG_INFO:
-                logLevel = @"[Info]"; break;
-            default:
-                logLevel = @"[Verbose]"; break;
+            case DDLogFlagError:
+                logLevel = @"[Error]";
+                break;
+            case DDLogFlagWarning:
+                logLevel = @"[Warn]";
+                break;
+            case DDLogFlagInfo:
+                logLevel = @"[Info]";
+                break;
+            case DDLogFlagDebug:
+                logLevel = @"[Debug]";
+                break;
+            case DDLogFlagVerbose:
+                logLevel = @"[Verbose]";
+                break;
         }
         
-        NSDate *timestamp = logMessage->timestamp;
+        NSDate *timestamp = logMessage->_timestamp;
         
         [_dateFormatterLock lock];
         NSString *dateAndTime = [_dateFormatter stringFromDate:timestamp];
         [_dateFormatterLock unlock];
         
-        NSString *filePath = [[NSString alloc] initWithCString:logMessage->file encoding:NSUTF8StringEncoding];
-        NSString *fileName = [[filePath lastPathComponent] stringByDeletingPathExtension];
+        NSString *logMsg = logMessage->_message;
         
-        NSString *logMsg = logMessage->logMsg;
-        
-        NSString *logMessageString = [NSString stringWithFormat:@"%@ %@ (%s)%@: %@\n", dateAndTime, fileName, logMessage->function, logLevel, logMsg];
+        NSString *logMessageString = [NSString stringWithFormat:@"%@ %@ (%s)%@: %@\n", dateAndTime, logMessage->_fileName, logMessage->_function, logLevel, logMsg];
         
         copy = [logMessageString copy];
     }
