@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Flannel"
-  s.version      = "1.0.2"
+  s.version      = "2.0.0"
   s.summary      = "Flannel is a stylish log formatter for CocoaLumberjack"
   s.description  = <<-DESC
                     Flannel is a stylish log formatter for CocoaLumberjack. Flannel is thread safe and formats your CocoaLumberjack log statements so that you know the class and method from which your log statement originated.
