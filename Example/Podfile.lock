@@ -11,6 +11,7 @@ PODS:
     - CocoaLumberjack (~> 2.0.0-rc)
 
 DEPENDENCIES:
+  - CocoaLumberjack (~> 2.0.0-rc)
   - Flannel (from `../`)
 
 EXTERNAL SOURCES:

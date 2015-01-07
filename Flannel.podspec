@@ -15,6 +15,4 @@ Pod::Spec.new do |s|
 # s.osx.deployment_target = '10.7'
 
   s.source_files = 'Pod/Classes'
-  
-  s.dependency 'CocoaLumberjack', '~> 2.0.0-rc'
 end
