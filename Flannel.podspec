@@ -14,9 +14,8 @@ Pod::Spec.new do |s|
   s.ios.platform   = :ios, '7.0'
   s.osx.platform   = :osx, '10.9'
 
-  s.dependency 'CocoaLumberjack', '> 1.9.2'
-
-  s.source_files = 'Classes/'
-  
+  s.source_files = 'Pod/Classes'
   s.public_header_files = 'Classes/**/*.h'
+  
+  s.dependency 'CocoaLumberjack', '~> 2.0.0-rc'
 end

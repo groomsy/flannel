@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="FLAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwg-wl-6TW">
+                                <rect key="frame" x="63" y="183" width="194" height="202"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JX-Il-Z3t">
+                                        <rect key="frame" x="42" y="0.0" width="110" height="34"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
+                                        <state key="normal" title="Verbose Log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="log:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qTm-Yp-Fx0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU9-N1-ncI">
+                                        <rect key="frame" x="47" y="42" width="100" height="34"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
+                                        <state key="normal" title="Debug Log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="log:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kSq-dK-H40"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0V-Xj-AVp">
+                                        <rect key="frame" x="57" y="84" width="81" height="34"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
+                                        <state key="normal" title="Info Log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="log:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8dF-Ja-uKe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-3L-JHg">
+                                        <rect key="frame" x="52" y="126" width="90" height="34"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
+                                        <state key="normal" title="Warn Log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="log:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q42-FC-EFO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70X-Oi-ehK">
+                                        <rect key="frame" x="53" y="168" width="88" height="34"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="8" maxX="12" maxY="8"/>
+                                        <state key="normal" title="Error Log">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="log:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LqJ-Xs-9hx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Z1f-3L-JHg" firstAttribute="centerX" secondItem="Q0V-Xj-AVp" secondAttribute="centerX" id="AAL-Ua-1a8"/>
+                                    <constraint firstItem="9JX-Il-Z3t" firstAttribute="centerX" secondItem="dU9-N1-ncI" secondAttribute="centerX" id="CwL-lJ-tfj"/>
+                                    <constraint firstAttribute="centerX" secondItem="9JX-Il-Z3t" secondAttribute="centerX" id="DSr-a4-5p6"/>
+                                    <constraint firstItem="70X-Oi-ehK" firstAttribute="top" secondItem="Z1f-3L-JHg" secondAttribute="bottom" constant="8" id="EYB-BI-cRB"/>
+                                    <constraint firstItem="dU9-N1-ncI" firstAttribute="centerX" secondItem="Q0V-Xj-AVp" secondAttribute="centerX" id="Gqm-xH-Qhe"/>
+                                    <constraint firstAttribute="trailing" secondItem="9JX-Il-Z3t" secondAttribute="trailing" constant="42" id="JEV-nb-t0K"/>
+                                    <constraint firstItem="Z1f-3L-JHg" firstAttribute="top" secondItem="Q0V-Xj-AVp" secondAttribute="bottom" constant="8" id="O4X-6S-KpG"/>
+                                    <constraint firstItem="Z1f-3L-JHg" firstAttribute="centerX" secondItem="70X-Oi-ehK" secondAttribute="centerX" id="iD6-fU-LBV"/>
+                                    <constraint firstItem="Q0V-Xj-AVp" firstAttribute="top" secondItem="dU9-N1-ncI" secondAttribute="bottom" constant="8" id="iv4-kX-1KZ"/>
+                                    <constraint firstItem="9JX-Il-Z3t" firstAttribute="top" secondItem="nwg-wl-6TW" secondAttribute="top" id="kGn-FH-aRQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="70X-Oi-ehK" secondAttribute="bottom" id="oYx-0V-bt4"/>
+                                    <constraint firstItem="dU9-N1-ncI" firstAttribute="top" secondItem="9JX-Il-Z3t" secondAttribute="bottom" constant="8" id="qEh-I9-74Y"/>
+                                    <constraint firstItem="9JX-Il-Z3t" firstAttribute="leading" secondItem="nwg-wl-6TW" secondAttribute="leading" constant="42" id="qst-wB-fwx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="nwg-wl-6TW" secondAttribute="centerX" id="sCz-Qz-xbx"/>
+                            <constraint firstAttribute="centerY" secondItem="nwg-wl-6TW" secondAttribute="centerY" id="wBk-u8-BYF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="debugLogButton" destination="dU9-N1-ncI" id="sPr-4d-mp5"/>
+                        <outlet property="errorLogButton" destination="70X-Oi-ehK" id="BEl-bq-HqS"/>
+                        <outlet property="infoLogButton" destination="Q0V-Xj-AVp" id="4Rj-ac-eyt"/>
+                        <outlet property="verboseLogButton" destination="9JX-Il-Z3t" id="v3m-iH-Vqm"/>
+                        <outlet property="warnLogButton" destination="Z1f-3L-JHg" id="RtL-ZZ-xVX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="379"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

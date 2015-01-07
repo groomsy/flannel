@@ -1,7 +1,9 @@
-pod "Flannel", :path => "../Flannel.podspec"
+source 'https://github.com/CocoaPods/Specs.git'
 
-target "Demo" do
+target 'Flannel', :exclusive => true do
+  pod "Flannel", :path => "../"
 end
 
-target "DemoTests" do
+target 'Tests', :exclusive => true do
+  pod "Flannel", :path => "../"  
 end

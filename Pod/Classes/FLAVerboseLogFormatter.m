@@ -76,7 +76,7 @@
         
         NSString *logMsg = logMessage->_message;
         
-        NSString *logMessageString = [NSString stringWithFormat:@"%@ %@ (%s)%@: %@\n", dateAndTime, logMessage->_fileName, logMessage->_function, logLevel, logMsg];
+        NSString *logMessageString = [NSString stringWithFormat:@"%@ %@ (%@)%@: %@\n", dateAndTime, logMessage->_fileName, logMessage->_function, logLevel, logMsg];
         
         copy = [logMessageString copy];
     }
