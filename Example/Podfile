@@ -4,10 +4,9 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 target 'Flannel', :exclusive => true do
-  pod 'Flannel', :path => '../'
-  pod 'CocoaLumberjack', '~> 2.0.0-rc'
+  pod "Flannel", :path => "../"
 end
 
 target 'Tests', :exclusive => true do
-  pod 'Flannel', :path => '../'
+  pod "Flannel", :path => "../"  
 end
