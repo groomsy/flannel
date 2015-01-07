@@ -11,11 +11,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/groomsy/flannel.git", :tag => "#{s.version}" }
   
   s.requires_arc = true
-  s.ios.platform   = :ios, '7.0'
-  s.osx.platform   = :osx, '10.9'
+  s.ios.deployment_target = '5.0'
+  s.osx.deployment_target = '10.7'
 
   s.source_files = 'Pod/Classes'
-  s.public_header_files = 'Classes/**/*.h'
   
   s.dependency 'CocoaLumberjack', '~> 2.0.0-rc'
 end
