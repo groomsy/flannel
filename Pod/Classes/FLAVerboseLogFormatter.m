@@ -1,4 +1,4 @@
-#import "DDLog.h"
+#import "CocoaLumberjack.h"
 #import "FLAVerboseLogFormatter.h"
 
 /**
